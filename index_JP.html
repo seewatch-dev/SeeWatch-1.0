@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="jp">
+<title>SeeWatch</title>
+<meta charset="UTF-8">
+<meta http-equiv="Content-language" content="jp">
+<link rel="shortcut icon" href="Images/Logo/icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://use.fontawesome.com/f00004b6ac.js"></script>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<script type="text/javascript" src="script.js"></script>
+<script src="app.js" defer></script>
+<meta name="keywords" content="SeeWatch, Bijoux, Bijou, Bague, Bagues, Ring, Rings, Collier, Necklace, Colliers, Neckalces, Bracelet, Bracelets, Boucles D'Oreilles, Earring, Earrings, Argent Sterling, Or, Sapphir, Emeuraude, Moissanite, Diamand, Zircon, Bijoux femme, Bijoux femmes, Bijoux hommes, Bijoux homme, Montre, Montres, Anillos, Oevas, Bijoux français, Bijoux américain, Bijoux canadien, Bijoux chinois, Bijous suedois, Bijoux allemand, Bijoux monde, Bijoux afrique, Bijoux de qualité, Cadeaux, Anniversaire, Mariage, SeeWatch, seewatch_official">
+<meta name="description" content="SeeWatch, Bijoux, Bijou, Bague, Bagues, Ring, Rings, Collier, Necklace, Colliers, Neckalces, Bracelet, Bracelets, Boucles D'Oreilles, Earring, Earrings, Argent Sterling, Or, Sapphir, Emeuraude, Moissanite, Diamand, Zircon, Bijoux femme, Bijoux femmes, Bijoux hommes, Bijoux homme, Montre, Montres, Anillos, Oevas, Bijoux français, Bijoux américain, Bijoux canadien, Bijoux chinois, Bijous suedois, Bijoux allemand, Bijoux monde, Bijoux afrique, Bijoux de qualité, Cadeaux, Anniversaire, Mariage, SeeWatch, seewatch_official">
+<meta name="copyright" content="Coryright © SeeWatch">
+
+
+<!--PWA-->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="Image/Logo/icon.png">
+<meta name="apple-mobile-web-app-statuts-bar" content="black">
+<meta name="theme-color" content="black">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<style>
+		.sidebar a {
+		  font-family: "Lato", sans-serif
+		}
+		body,h1,h2,h3,h4,h5,h6,.wide {
+		  font-family: "Montserrat", sans-serif;
+		}
+		.mySlides {
+			display: none
+		}
+</style>
+<body>
+
+  <!-- Navbar -->
+<div class="top">
+  <div class="bar white padding">
+    <a href="index_JP.html"><img src="Images/Logo/Diamant.png" class="circle left margin-right" style="max-width: 58px;"></a>
+    <div class="button padding-16 left" onclick="SWopen()"><i class="fa fa-fw fa-bars xlarge"></i></div>
+    <a class="bar-item button padding-large hide-medium hide-large right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <div class="right">
+      <a onclick="myAccFuncCountry()" href="javascript:void(0)" class="button block left-align padding-16"><i class="fa fa-caret-down"></i> JP<img src="Images/Drapeaux/JP.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+      <div id="demoAcc1" class="bar-block hide center">
+        <a href="index_DE.html" class="bar-item button">DE<img src="Images/Drapeaux/DE.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index.html" class="bar-item button">FR<img src="Images/Drapeaux/FR.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_US.html" class="bar-item button">US<img src="Images/Drapeaux/US.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_UK.html" class="bar-item button">UK<img src="Images/Drapeaux/UK.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_IT.html" class="bar-item button">IT<img src="Images/Drapeaux/IT.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_ES.html" class="bar-item button">ES<img src="Images/Drapeaux/ES.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_SE.html" class="bar-item button">SE<img src="Images/Drapeaux/SE.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_NL.html" class="bar-item button">NL<img src="Images/Drapeaux/NL.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_PL.html" class="bar-item button">PL<img src="Images/Drapeaux/PL.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_CA.html" class="bar-item button">CA<img src="Images/Drapeaux/CA.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_AU.html" class="bar-item button">AU<img src="Images/Drapeaux/AU.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white top" style="display:none;z-index:3;width:250px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="SWclose()" class="fa fa-remove button display-topright xlarge"></i>
+  </div>
+  <div class="padding-64 large text-grey" style="font-weight:bold">
+    <!--<input type="search" name="recherche" class="margin" placeholder="Research"><div class="button margin-bottom margin-left" style="width: 210px;"><i class="fa fa-fw fa-search"></i></div>-->
+    <a href="JP/Bagues_JP.html" class="bar-item button">リング</a>
+    <a href="JP/Colliers_JP.html" class="bar-item button">ネックレス</a>
+    <a href="JP/Bracelets_JP.html" class="bar-item button">ブレスレット</a>
+    <a href="JP/Boucles_doreilles_JP.html" class="bar-item button">イヤリング</a>
+    <a href="JP/Produits_JP.html" class="bar-item button">全て</a>
+    <a href="#" class="bar-item button">プロ</a>
+    <!--<a onclick="myAccFuncMarques()" href="javascript:void(0)" class="button block left-align"><i class="fa fa-caret-down"></i> Marque</a>
+    <div id="demoAccMarques" class="bar-block hide padding-large medium">
+      <a href="#" class="bar-item button"></i>Anillos</a>
+      <a href="#" class="bar-item button">Oevas</a>
+      <a href="#" class="bar-item button">Boamer</a>
+      <a href="#" class="bar-item button">Japon</a>
+    </div>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block left-align"><i class="fa fa-caret-down"></i> Pays</a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+      <a href="#" class="bar-item button"></i>France</a>
+      <a href="#" class="bar-item button">Allemagne</a>
+      <a href="#" class="bar-item button">Chine</a>
+      <a href="#" class="bar-item button">Japon</a>
+    </div>-->
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large white large">
+  <div class="bar-item wide"><a href="index_JP.html"><img src="Images/Logo/Diamant.png" class="circle left margin-right" style="max-width: 58px;"></a></div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="SWopen()"><i class="fa fa-bars"></i></a>
+  <div class="right">
+      <a onclick="myAccFuncCountry()" href="javascript:void(0)" class="button block left-align padding-24"><i class="fa fa-caret-down"></i> CA<img src="Images/Drapeaux/JP.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+      <div id="demoAcc1" class="bar-block hide medium center">
+        <a href="index_DE.html" class="bar-item button">DE<img src="Images/Drapeaux/DE.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index.html" class="bar-item button">FR<img src="Images/Drapeaux/FR.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_US.html" class="bar-item button">US<img src="Images/Drapeaux/US.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_UK.html" class="bar-item button">UK<img src="Images/Drapeaux/UK.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_IT.html" class="bar-item button">IT<img src="Images/Drapeaux/IT.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_ES.html" class="bar-item button">ES<img src="Images/Drapeaux/ES.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_SE.html" class="bar-item button">SE<img src="Images/Drapeaux/SE.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_NL.html" class="bar-item button">NL<img src="Images/Drapeaux/NL.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_PL.html" class="bar-item button">PL<img src="Images/Drapeaux/PL.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_CA.html" class="bar-item button">CA<img src="Images/Drapeaux/CA.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_AU.html" class="bar-item button">AU<img src="Images/Drapeaux/AU.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+      </div>
+    </div>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="SWclose()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Page content -->
+<div class="content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="JP/Anillos_N063_JP.html">
+    <img src="Images/Slides/Slide1.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="JP/Anillos_N003_JP.html">
+      <img src="Images/Slides/Slide2.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="JP/Anillos_X0029_JP.html">
+      <img src="Images/Slides/Slide3.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="JP/Anillos_N086_JP.html">
+      <img src="Images/Slides/Slide4.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="JP/Anillos_X0012_JP.html">
+      <img src="Images/Slides/Slide5.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="JP/Anillos_R234_JP.html">
+      <img src="Images/Slides/Slide6.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="JP/Anillos_J0021_JP.html">
+      <img src="Images/Slides/Slide7.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="JP/Anillos_N0041_JP.html">
+      <img src="Images/Slides/Slide8.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="JP/Anillos_J1999_JP.html">
+      <img src="Images/Slides/Slide9.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="JP/Anillos_J0020_JP.html">
+      <img src="Images/Slides/Slide10.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <br>
+
+  <!-- The Band Section -->
+  <div class="container content center padding-16" style="max-width:800px" id="band">
+    <h2 class="wide">私たちの品質</h2>
+    <p class="opacity"><i>私たちが購入するものの保証</i></p>
+    <p class="justify">当社が販売するすべてのジュエリーは、第三者および独立した会社によって認証されており、販売先の国で認められた証明書を発行しています。</p>
+    <p>宝石は宝石商から来ています。</p>
+    <hr>
+  </div>
+
+  <!-- Product grid -->
+  <div class="row padding content" style="max-width: 1100px;">
+  	<br>
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_J0020_JP.html"><img src="Images/Anillos/J0020/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>リング Anillos J0020<br><b class="opacity">6 188 ¥</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_X0011_JP.html"><img src="Images/Anillos/X0011/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>ネックレス Anillos X0011<br><b class="opacity">11 348 ¥</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_E002_JP.html"><img src="Images/Anillos/E002/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>イヤリング Anillos E002<br><b class="opacity">10 058 ¥</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_J0028_JP.html"><img src="Images/Anillos/J0028/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>リング Anillos J0028<br><b class="opacity">7 478 ¥</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_X0029_JP.html"><img src="Images/Anillos/X0029/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>ブレスレット Anillos X0029<br><b class="opacity">3 618 ¥</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_N003_JP.html"><img src="Images/Anillos/N003/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>ネックレス Anillos N003<br><b class="opacity">16 508 ¥</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_X0012_JP.html"><img src="Images/Anillos/X0012/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>リング Anillos X0012<br><b class="opacity">15 218 ¥</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_X0083_JP.html"><img src="Images/Anillos/X0083/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>イヤリング Anillos X0083<br><b class="opacity">8 768 ¥</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6 center">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_J1999_JP.html"><img src="Images/Anillos/J1999/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>リング Anillos J1999<br><b class="opacity">6 188 ¥</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_N086_JP.html"><img src="Images/Anillos/N086/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>ネックレス Anillos N086<br><b class="opacity">12 638 ¥</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_E049_JP.html"><img src="Images/Anillos/E049/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>イヤリング Anillos E049<br><b class="opacity">6 188 ¥</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_R234_JP.html"><img src="Images/Anillos/R234/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>リング Anillos R234<br><b class="opacity">17 798 ¥</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_J0022_JP.html"><img src="Images/Anillos/J0022/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>リング Anillos J0022<br><b class="opacity">6 188 ¥</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_N063_JP.html"><img src="Images/Anillos/N063/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>ネックレス Anillos N063<br><b class="opacity">19 078 ¥</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6 center">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_R0016_JP.html"><img src="Images/Anillos/R0016/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>イヤリング Anillos R0016<br><b class="opacity">8 768 ¥</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="JP/Anillos_R032_JP.html"><img src="Images/Anillos/R032/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>リング Anillos R032<br><b class="opacity">20 368 ¥</b></p>
+      </div>
+    </div>
+    <div class="center">
+    <a href="JP/Produits_JP.html" class="button large white round-large opacity" style="margin: 30px;">続きを見る</a>
+  </div>
+  </div>
+  <hr>
+  <br>
+
+    <!-- Footer -->
+  <footer class="padding-64 light-grey small center" id="footer">
+    <div class="row-padding">
+      <div class="col s4 right-align">
+        <h4>だいたい</h4>
+        <p><a href="JP/Support_JP.html">サポート</a></p>
+        <p><a href="JP/Nous_JP.html">私たちは誰ですか</a></p>
+        <p><a href="JP/Carrieres_JP.html">キャリア</a></p>
+        <p><a href="JP/Aide_JP.html">ヘルプ</a></p>
+      </div>
+
+      <div class="col s4">
+        <h4>政治</h4>
+        <p><a href="JP/Magasin_JP.html">お店を探す</a></p>
+        <p><a href="JP/Expedition_JP.html">発送</a></p>
+        <p><a href="JP/Paiement_JP.html">支払い</a></p>
+        <p><a href="JP/Retour_JP.html">戻る</a></p>
+        <p><a href="JP/Taille_JP.html">サイズ</a></p>
+      </div>
+
+      <div class="col s4 left-align">
+        <h4>承認</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> クレジットカード</p>
+        <p><i class="fa fa-fw fa-paypal"></i> Paypal</p>
+        <p><i class="fa fa-fw fa-university"></i> 支払い</p>
+        <br>
+        <a href="https://www.instagram.com/seewatch_official/"><i class="fa fa-instagram hover-opacity large"></i></a>
+        <a href=""><i class="fa fa-pinterest-p hover-opacity large"></i></a>
+        <a href=""><i class="fa fa-twitter hover-opacity large"></i></a>
+        <a href=""><i class="fa fa-linkedin hover-opacity large"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="opacity center padding-24">
+    <p>V1.0</p>
+    <p>全著作権所有 © 2021 SeeWatch.</p>
+  </div>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

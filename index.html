@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<title>SeeWatch</title>
+<meta charset="UTF-8">
+<meta http-equiv="Content-language" content="fr">
+<link rel="shortcut icon" href="Images/Logo/icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://use.fontawesome.com/f00004b6ac.js"></script>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<script type="text/javascript" src="script.js"></script>
+<script src="app.js" defer></script>
+<meta name="keywords" content="SeeWatch, Bijoux, Bijou, Bague, Bagues, Ring, Rings, Collier, Necklace, Colliers, Neckalces, Bracelet, Bracelets, Boucles D'Oreilles, Earring, Earrings, Argent Sterling, Or, Sapphir, Emeuraude, Moissanite, Diamand, Zircon, Bijoux femme, Bijoux femmes, Bijoux hommes, Bijoux homme, Montre, Montres, Anillos, Oevas, Bijoux français, Bijoux américain, Bijoux canadien, Bijoux chinois, Bijous suedois, Bijoux allemand, Bijoux monde, Bijoux afrique, Bijoux de qualité, Cadeaux, Anniversaire, Mariage, SeeWatch, seewatch_official">
+<meta name="description" content="SeeWatch, Bijoux, Bijou, Bague, Bagues, Ring, Rings, Collier, Necklace, Colliers, Neckalces, Bracelet, Bracelets, Boucles D'Oreilles, Earring, Earrings, Argent Sterling, Or, Sapphir, Emeuraude, Moissanite, Diamand, Zircon, Bijoux femme, Bijoux femmes, Bijoux hommes, Bijoux homme, Montre, Montres, Anillos, Oevas, Bijoux français, Bijoux américain, Bijoux canadien, Bijoux chinois, Bijous suedois, Bijoux allemand, Bijoux monde, Bijoux afrique, Bijoux de qualité, Cadeaux, Anniversaire, Mariage, SeeWatch, seewatch_official">
+<meta name="copyright" content="Coryright © SeeWatch">
+
+
+<!--PWA-->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="Image/Logo/icon.png">
+<meta name="apple-mobile-web-app-statuts-bar" content="black">
+<meta name="theme-color" content="black">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<style>
+		.sidebar a {
+		  font-family: "Lato", sans-serif
+		}
+		body,h1,h2,h3,h4,h5,h6,.wide {
+		  font-family: "Montserrat", sans-serif;
+		}
+		.mySlides {
+			display: none
+		}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="top">
+  <div class="bar white padding">
+    <a href="index.html"><img src="Images/Logo/icon.png" class="circle left margin-right" style="max-width: 58px;"></a>
+    <div class="button padding-16 left" onclick="SWopen()"><i class="fa fa-fw fa-bars xlarge"></i></div>
+    <a class="bar-item button padding-large hide-medium hide-large right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <div class="right">
+      <a onclick="myAccFuncCountry()" href="javascript:void(0)" class="button block left-align padding-16"><i class="fa fa-caret-down"></i> FR<img src="Images/Drapeaux/FR.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+      <div id="demoAcc1" class="bar-block hide center">
+        <a href="index_DE.html" class="bar-item button">DE<img src="Images/Drapeaux/DE.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_UK.html" class="bar-item button">UK<img src="Images/Drapeaux/UK.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_US.html" class="bar-item button">US<img src="Images/Drapeaux/US.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_CA.html" class="bar-item button">CA<img src="Images/Drapeaux/CA.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_IT.html" class="bar-item button">IT<img src="Images/Drapeaux/IT.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_ES.html" class="bar-item button">ES<img src="Images/Drapeaux/ES.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_SE.html" class="bar-item button">SE<img src="Images/Drapeaux/SE.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_NL.html" class="bar-item button">NL<img src="Images/Drapeaux/NL.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_PL.html" class="bar-item button">PL<img src="Images/Drapeaux/PL.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_JP.html" class="bar-item button">JP<img src="Images/Drapeaux/JP.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_AU.html" class="bar-item button">AU<img src="Images/Drapeaux/AU.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white top" style="display:none;z-index:3;width:250px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="SWclose()" class="fa fa-remove button display-topright xlarge"></i>
+  </div>
+  <div class="padding-64 large text-grey" style="font-weight:bold">
+    <input type="search" name="recherche" class="margin" placeholder="Research"><div class="button margin-bottom margin-left" style="width: 210px;"><i class="fa fa-fw fa-search"></i></div>
+    <a href="FR/Bagues_FR.html" class="bar-item button">Bagues</a>
+    <a href="FR/Colliers_FR.html" class="bar-item button">Colliers</a>
+    <a href="FR/Bracelets_FR.html" class="bar-item button">Bracelets</a>
+    <a href="FR/Boucles_doreilles_FR.html" class="bar-item button">Boucles D'Oreilles</a>
+    <a href="FR/Produits_FR.html" class="bar-item button">Tous</a>
+    <a href="#" class="bar-item button">Pros</a>
+    <!--<a onclick="myAccFuncMarques()" href="javascript:void(0)" class="button block left-align"><i class="fa fa-caret-down"></i> Marque</a>
+    <div id="demoAccMarques" class="bar-block hide padding-large medium">
+      <a href="#" class="bar-item button"></i>Anillos</a>
+      <a href="#" class="bar-item button">Oevas</a>
+      <a href="#" class="bar-item button">Boamer</a>
+      <a href="#" class="bar-item button">Japon</a>
+    </div>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block left-align"><i class="fa fa-caret-down"></i> Pays</a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+      <a href="#" class="bar-item button"></i>France</a>
+      <a href="#" class="bar-item button">Allemagne</a>
+      <a href="#" class="bar-item button">Chine</a>
+      <a href="#" class="bar-item button">Japon</a>
+    </div>-->
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large white large">
+  <div class="bar-item wide"><a href="index.html"><img src="Images/Logo/Diamant.png" class="circle left margin-right" style="max-width: 58px;"></a></div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="SWopen()"><i class="fa fa-bars"></i></a>
+  <div class="right">
+      <a onclick="myAccFuncCountry()" href="javascript:void(0)" class="button block left-align padding-24"><i class="fa fa-caret-down"></i> FR<img src="Images/Drapeaux/FR.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+      <div id="demoAcc1" class="bar-block hide medium center">
+        <a href="index_DE.html" class="bar-item button">DE<img src="Images/Drapeaux/DE.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_UK.html" class="bar-item button">UK<img src="Images/Drapeaux/UK.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_US.html" class="bar-item button">US<img src="Images/Drapeaux/US.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_CA.html" class="bar-item button">CA<img src="Images/Drapeaux/CA.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_IT.html" class="bar-item button">IT<img src="Images/Drapeaux/IT.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_ES.html" class="bar-item button">ES<img src="Images/Drapeaux/ES.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_SE.html" class="bar-item button">SE<img src="Images/Drapeaux/SE.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_NL.html" class="bar-item button">NL<img src="Images/Drapeaux/NL.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_PL.html" class="bar-item button">PL<img src="Images/Drapeaux/PL.jpg" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_JP.html" class="bar-item button">JP<img src="Images/Drapeaux/JP.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+        <a href="index_AU.html" class="bar-item button">AU<img src="Images/Drapeaux/AU.png" class="circle" style="max-width: 25px; margin-left: 4px;"></a>
+      </div>
+    </div>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="SWclose()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Page content -->
+<div class="content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="FR/Anillos_N063_FR.html">
+    <img src="Images/Slides/Slide1.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="FR/Anillos_N003_FR.html">
+      <img src="Images/Slides/Slide2.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="FR/Anillos_X0029_FR.html">
+      <img src="Images/Slides/Slide3.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="FR/Anillos_N086_FR.html">
+      <img src="Images/Slides/Slide4.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="FR/Anillos_X0012_FR.html">
+      <img src="Images/Slides/Slide5.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="FR/Anillos_R234_FR.html">
+      <img src="Images/Slides/Slide6.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="FR/Anillos_J0021_FR.html">
+      <img src="Images/Slides/Slide7.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="FR/Anillos_N0041_FR.html">
+      <img src="Images/Slides/Slide8.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="FR/Anillos_J1999_FR.html">
+      <img src="Images/Slides/Slide9.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <div class="mySlidesImg display-container center" style="margin-top: 60px;">
+    <a href="FR/Anillos_J0020_FR.html">
+      <img src="Images/Slides/Slide10.png" style="width:100%;max-height:500px;">
+    </a>
+  </div>
+  <br>
+
+  <!-- The Band Section -->
+  <div class="container content center padding-16" style="max-width:800px" id="band">
+    <h2 class="wide">Notre Qualité</h2>
+    <p class="opacity"><i>L'assurance de ce qu'on achète</i></p>
+    <p class="justify">La totalité des bijoux vendu par notre entreprise on fait la preuve d'une certification par une société tierce et indépendante, délivrant un certificat reconnu dans les pays auquel ils sont vendus.</p>
+    <p>Les bijoux sont issus de bijoutier.</p>
+    <hr>
+  </div>
+
+  <!-- Product grid -->
+  <div class="row padding content" style="max-width: 1100px;">
+  	<br>
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_J0020_FR.html"><img src="Images/Anillos/J0020/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Bague Anillos J0020<br><b class="opacity">48 €</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_X0011_FR.html"><img src="Images/Anillos/X0011/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Collier Anillos X0011<br><b class="opacity">88 €</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_E002_FR.html"><img src="Images/Anillos/E002/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Boucles D'oreille Anillos E002<br><b class="opacity">78 €</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_J0028_FR.html"><img src="Images/Anillos/J0028/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Bague Anillos J0028<br><b class="opacity">58 €</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_X0029_FR.html"><img src="Images/Anillos/X0029/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Bracelet Anillos X0029<br><b class="opacity">28 €</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_N003_FR.html"><img src="Images/Anillos/N003/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Collier Anillos N003<br><b class="opacity">128 €</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_X0012_FR.html"><img src="Images/Anillos/X0012/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Bague Anillos X0012<br><b class="opacity">118 €</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_X0083_FR.html"><img src="Images/Anillos/X0083/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Boucles D'Oreilles Anillos X0083<br><b class="opacity">68 €</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6 center">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_J1999_FR.html"><img src="Images/Anillos/J1999/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Bague Anillos J1999<br><b class="opacity">48 €</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_N086_FR.html"><img src="Images/Anillos/N086/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Collier Anillos N086<br><b class="opacity">98 €</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_E049_FR.html"><img src="Images/Anillos/E049/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Boucles D'Oreilles Anillos E049<br><b class="opacity">48 €</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_R234_FR.html"><img src="Images/Anillos/R234/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Bague Anillos R234<br><b class="opacity">138 €</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_J0022_FR.html"><img src="Images/Anillos/J0022/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Bague Anillos J0022<br><b class="opacity">48 €</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_N063_FR.html"><img src="Images/Anillos/N063/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Collier Anillos N063<br><b class="opacity">148 €</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6 center">
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_R0016_FR.html"><img src="Images/Anillos/R0016/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Boucles D'Oreilles Anillos R0016<br><b class="opacity">68 €</b></p>
+      </div>
+      <div class="container padding-large hover-opacity">
+        <div class="display-container">
+          <a href="FR/Anillos_R032_FR.html"><img src="Images/Anillos/R032/1.jpg" style="width:100%" class="round-xxlarge"></a>
+          <span class="tag display-topright round">New</span>
+        </div>
+        <p>Bague Anillos R032<br><b class="opacity">158 €</b></p>
+      </div>
+    </div>
+    <div class="center">
+    <a href="FR/Produits_FR.html" class="button large white round-large opacity" style="margin: 30px;">VOIR PLUS</a>
+  </div>
+  </div>
+  <hr>
+  <br>
+
+    <!-- Footer -->
+  <footer class="padding-64 light-grey small center" id="footer">
+    <div class="row-padding">
+      <div class="col s4 right-align">
+        <h4>A propos</h4>
+        <p><a href="FR/Support_FR.html">Support</a></p>
+        <p><a href="FR/Nous_FR.html">Qui Nous Sommes</a></p>
+        <p><a href="FR/Carrieres_FR.html">Carières</a></p>
+        <p><a href="FR/Aide_FR.html">Aide</a></p>
+      </div>
+
+      <div class="col s4">
+        <h4>Politique</h4>
+        <p><a href="FR/Magasin_FR.html">Trouver un magasin</a></p>
+        <p><a href="FR/Expedition_FR.html">Expédition</a></p>
+        <p><a href="FR/Paiement_FR.html">Paiement</a></p>
+        <p><a href="FR/Retour_FR.html">Retour</a></p>
+        <p><a href="FR/Taille_FR.html">Taille</a></p>
+      </div>
+
+      <div class="col s4 left-align">
+        <h4>Accepté</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <p><i class="fa fa-fw fa-paypal"></i> Paypal</p>
+        <p><i class="fa fa-fw fa-university"></i> Virement</p>
+        <br>
+        <a href="https://www.instagram.com/seewatch_official/"><i class="fa fa-instagram hover-opacity large"></i></a>
+        <a href=""><i class="fa fa-pinterest-p hover-opacity large"></i></a>
+        <a href=""><i class="fa fa-twitter hover-opacity large"></i></a>
+        <a href=""><i class="fa fa-linkedin hover-opacity large"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="opacity center padding-24">
+    <p>V1.0</p>
+    <p>Tous droits réservé © 2021 SeeWatch.</p>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
